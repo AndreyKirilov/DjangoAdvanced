@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+        <title>Thank you for registering!</title>
+</head>
+<body>
+<h1>{{ message}}</h1>
+<p>First Name: {{ user.first_name}}</p>
+<p>Last Name: {{ user.last_name }}</p>
+<p>Email: {{ user.email }}</p>
+<a href="{% url 'user-logout' %}"><button>Logout</button></a>
+</body>
+</html>

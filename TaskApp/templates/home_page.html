@@ -1,0 +1,22 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="{% static 'css/home-page.css' %}">
+</head>
+<body>
+<h1>Hello!</h1>
+
+{% if user.is_authenticated %}
+<a href="{% url 'create-book' %}"><button class="book-button">Create Book</button></a>
+<a href="{% url 'profile-details' pk=user.pk %}"><button class="profile-button">Profile</button></a>    
+
+{% else %}
+<a href="{% url 'user-create' %}"><button class="user-register" >Register</button></a>
+<a href="{% url 'user-login' %}"><button class="user-login" >Log In</button></a>
+
+{% endif %}
+</body>
+</html>

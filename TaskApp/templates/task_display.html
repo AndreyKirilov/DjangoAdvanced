@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Task List</h1>
+<form method="get">
+    <input type="text" name="q" placeholder="Search..." value="{{ request.GET.q }}">
+    <button type="submit">Search</button>
+</form>
+<ul>
+{% for task in tasks %}
+    <li>{{ task.name }} - {{ task.description }}</li>
+    <a href="{% url 'delete-task' task.pk%}">Delete a Task</a>
+    <a href="{% url 'update-task' task.pk%}">Update a Task</a>
+    {% empty %}
+    <p>No tasks listed</p>
+{% endfor %}
+</ul>
+</body>
+</html>
