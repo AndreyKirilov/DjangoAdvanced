@@ -1,0 +1,50 @@
+.book-button{
+    background-color: orangered;
+    border: 1px;
+    color: white;
+    height: 30px;
+    margin-right: 10px;
+
+}
+
+.user-register{
+    background-color: forestgreen;
+    border: 1px;
+    color: white;
+    height: 30px;
+    margin-right: 10px;
+}
+
+.user-login{
+    background-color: darkblue;
+    border: 1px;
+    color: white;
+    height: 30px;
+    margin-right: 10px;
+}
+
+.profile-button{
+    background-color: yellow;
+    border: 1px;
+    color: white;
+    height: 30px;
+}
+.book-button:hover{
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+.user-register:hover {
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+.user-login:hover {
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+.profile-button:hover{
+    opacity: 0.5;
+    cursor: pointer;
+}
